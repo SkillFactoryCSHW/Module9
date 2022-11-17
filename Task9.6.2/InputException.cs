@@ -9,7 +9,6 @@ using System.Threading.Tasks;
         public InputException()
         {
         }
-
         public InputException(string message) : base(message)
         {
         }

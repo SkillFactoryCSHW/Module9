@@ -1,8 +1,6 @@
 ﻿ConsoleKeyInfo key;
 List<string> ListNames = new List<string>() { "Ivanov", "Petreov", "Sidorov", "Po", "Price" };
 
-
-
 Console.WriteLine("Our list of the names without sort:");
 foreach (var item in ListNames)
 {
