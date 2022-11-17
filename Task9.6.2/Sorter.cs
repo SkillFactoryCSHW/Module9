@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 public class Sorter
 {
-    //
     public List<string> List;
     public ConsoleKeyInfo key;
 
@@ -32,11 +31,26 @@ public class Sorter
         }
     }
 
+    public List<string> SortingDescend(List<string> List)
+    {
+
+        List.Reverse();
+        foreach (var item in List)
+        {
+            Console.WriteLine(item);
+        }
+        return List;
+    }
+
     public void MethodSort(ConsoleKeyInfo key)
     {
         if (key.Key == ConsoleKey.D1)
         {
             Ascsort(List);
+        }
+        else
+        {
+            Descsort(List);
         }
     }
 }

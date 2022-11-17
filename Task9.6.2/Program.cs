@@ -11,7 +11,12 @@ foreach (var item in ListNames)
 
 Console.WriteLine("Choose 1 or 2");
 key = Console.ReadKey(true);
+
+if (key.Key != ConsoleKey.D1 && key.Key != ConsoleKey.D2)
+{
+    throw new InputException("Choose '1' or '2', please");
+}
+
 Sorter SorterM = new Sorter(ListNames, key);
 SorterM.Ascsort += SorterM.SortingAscend;
-
-SorterM.MethodSort(key);
+SorterM.Descsort += SorterM.SortingDescend;
