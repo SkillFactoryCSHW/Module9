@@ -17,7 +17,7 @@ public class Sorter
 
     public Sorter(List<string> list, ConsoleKeyInfo key)
     {
-        list = List;
+        List = list;
         this.key = key;
     }
 

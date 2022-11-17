@@ -18,3 +18,5 @@ if (key.Key != ConsoleKey.D1 && key.Key != ConsoleKey.D2)
 Sorter SorterM = new Sorter(ListNames, key);
 SorterM.Ascsort += SorterM.SortingAscend;
 SorterM.Descsort += SorterM.SortingDescend;
+
+SorterM.MethodSort(key);
