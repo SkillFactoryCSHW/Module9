@@ -8,17 +8,21 @@ foreach (var item in ListNames)
 {
     Console.WriteLine(item);
 }
-
-Console.WriteLine("Choose 1 or 2");
-key = Console.ReadKey(true);
-
-if (key.Key != ConsoleKey.D1 && key.Key != ConsoleKey.D2)
+try
 {
-    throw new InputException("Choose '1' or '2', please");
+    Console.WriteLine("Choose 1 or 2");
+    key = Console.ReadKey(true);
+
+    Sorter SorterM = new Sorter(ListNames, key);
+    SorterM.Ascsort += SorterM.SortingAscend;
+    SorterM.Descsort += SorterM.SortingDescend;
+
+    SorterM.MethodSort(key);
+}
+catch (Exception ex)
+{
+    if (ex is InputException) Console.WriteLine("Choose '1' or '2', please");
+    else Console.WriteLine("Something else");
 }
 
-Sorter SorterM = new Sorter(ListNames, key);
-SorterM.Ascsort += SorterM.SortingAscend;
-SorterM.Descsort += SorterM.SortingDescend;
 
-SorterM.MethodSort(key);
